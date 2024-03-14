@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "lint": "eslint --fix",
+    "test": "jest --coverage",
+    "test live": "cross-env DEBUG_MODE=1 jest --coverage",
+    "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^8.0.3",
+    "jest": "^24.9.0",
+    "jest-electron": "^0.1.12",
+    "lint-staged": "^15.2.2",
+    "rimraf": "^5.0.5",
+    "rollup": "^2.79.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  }
+}
